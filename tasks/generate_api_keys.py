@@ -50,6 +50,9 @@ class APIKeyGenerator:
     mongo_cmd = generator.gen_mongo_check_cmd(api_key)
     print(f"\nMongoDB check command: {mongo_cmd}")
     ```
+
+    Example Usage in cmd:
+    python tasks/generate_api_keys.py
     """
 
     key: str | None = None

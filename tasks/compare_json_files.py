@@ -11,6 +11,9 @@ class JsonComparator:
     """
     This class provides methods to compare two JSON files and
     print the differences between them.
+
+    Example Usage in cmd:
+    python tasks/compare_json_files.py ~/first.json ~/second.json
     """
 
     def compare_json(self, path_1: str, path_2: str) -> None:

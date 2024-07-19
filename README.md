@@ -24,7 +24,8 @@ This is a helper project used to support daily routine works.
 │   ├── requirements.txt
 │   └── setup.sh
 ├── tasks
-│   └── generate_api_keys
+│   ├── compare_json_files.py
+│   └── generate_api_keys.py
 ├── init.sh
 └── README.md
 ```
