@@ -85,6 +85,19 @@ class APIKeyGenerator:
         """
         return f"db.account.find({{ api_key: /^{self.key}/ }})"
 
+    def get_mongo_upsert_cmd(self) -> str:
+        """
+        Generates a MongoDB updateOne command with upsert functionality.
+
+        Args:
+            mongo_id: The MongoDB document _id to update or insert.
+            api_key: The API key to set in the document.
+
+        Returns:
+            A string representing the MongoDB updateOne command.
+        """
+        return f"db.account.updateOne({{\"_id\": ObjectId('REAL_ACCOUNT_ID')}}, {{ $set: {{ \"api_key\": \"{self.key}\" }}}})"
+
 
 def main():
     """
@@ -112,6 +125,8 @@ def main():
     print(f"Generated API keys: {generator.key}")
     print("Please run this command in MongoDB to check if duplicate exists:")
     print(generator.gen_mongo_check_cmd())
+    print("Once checked, run the upset command to insert the value:")
+    print(generator.get_mongo_upsert_cmd())
 
 
 if __name__ == "__main__":
