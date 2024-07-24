@@ -22,7 +22,7 @@ sudo chmod +x "$venv_name/bin/activate"
 source "$venv_name/bin/activate"
 
 # Install dependencies from requirements.txt
-pip install -r "$script_dir/requirements.txt"
+pip install -r "$script_dir/.cmds/requirements.txt"
 
 # Upgrade pip version
 pip install --upgrade pip
