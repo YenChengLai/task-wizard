@@ -36,5 +36,5 @@ This is a helper project used to support daily routine works.
 In your command line run the python script to execute the wizard.
 
 ```.sh
-python tasks/api_key_generator.py
+./start.sh
 ```
