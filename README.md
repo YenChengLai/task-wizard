@@ -38,3 +38,14 @@ In your command line run the python script to execute the wizard.
 ```.sh
 ./start.sh
 ```
+
+You will see the below message shown:
+
+```.sh
+(1) Generate API keys
+(2) Extend epochs
+(3) Compare JSON files
+Enter your choice: 
+```
+
+Enter either one of these options and then follow the instructions if further input is needed.
