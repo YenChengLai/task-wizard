@@ -24,8 +24,9 @@ This is a helper project used to support daily routine works.
 │   ├── requirements.txt
 │   └── setup.sh
 ├── tasks
-│   ├── compare_json_files.py
-│   └── generate_api_keys.py
+│   ├── api_key_generator.py
+│   ├── epoch_handler.py
+|   └── json_comparator.py
 ├── init.sh
 └── README.md
 ```
@@ -35,5 +36,5 @@ This is a helper project used to support daily routine works.
 In your command line run the python script to execute the wizard.
 
 ```.sh
-python tasks/generate_api_keys.py
+python tasks/api_key_generator.py
 ```
