@@ -40,7 +40,7 @@ class JsonComparator:
         # Compare the data
         for key, value in data1.items():
             if key not in data2:
-                print(f"Key '{key}' missing in file2")
+                print(f"Key '{key}' missing in {file_2}")
             elif data2[key] != value:
                 print(f"Difference in key '{key}':")
                 print(f"    {file_1}: {value}")
