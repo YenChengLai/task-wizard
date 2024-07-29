@@ -128,7 +128,7 @@ def main():
     print(f"Generated API keys: {generator.key}")
     print("Please run this command in MongoDB to check if duplicate exists:")
     print(generator.gen_mongo_check_cmd())
-    print("Once checked, run the upset command to insert the value:")
+    print("Once checked, run the upsert command to insert the value:")
     print(generator.get_mongo_upsert_cmd())
 
 
