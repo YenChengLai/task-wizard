@@ -1,13 +1,16 @@
 """
-This module provides functionalities for extending epochs based on either a specified number of days or a specific date.
+This module provides functionalities for extending epochs based on 
+either a specified number of days or a specific date.
 
 **Epoch:**
 
-An epoch is a timestamp representing a specific point in time. It's often used to represent the start of a period for calculations or comparisons.
+An epoch is a timestamp representing a specific point in time. 
+It's often used to represent the start of a period for calculations or comparisons.
 
 **Extending Epochs:**
 
-This class allows extending epochs by adding a specified number of days or setting the epoch to a specific date.  
+This class allows extending epochs by adding a specified number of days 
+or setting the epoch to a specific date.  
 
 **Example Usage:**
 
@@ -27,6 +30,7 @@ print(f"Extended epoch (to 2024-08-10): {extended_epoch}")
 
 import time
 from datetime import datetime, timedelta
+
 
 class EpochHandler:
     """
@@ -51,7 +55,8 @@ class EpochHandler:
     print(f"Extended epoch (after 7 days): {extended_epoch}")
     ```
     """
-    def extend_epoch(self, days: int = None, date: str = None) -> int:
+
+    def extend_epoch(self, days: int = 0, date: str = "") -> int | None:
         """
         Extends the current epoch by a specified number of days or sets it to a specific date.
 
@@ -87,6 +92,7 @@ class EpochHandler:
 
         return extended_epoch
 
+
 def main():
     """
     The main function provides a user-friendly interface for extending epochs.
@@ -96,7 +102,9 @@ def main():
     Prints the extended epoch value.
     """
     epoch_handler = EpochHandler()
-    user_input = input("Please enter expected days for extension (integer) or a specific date (YYYY-MM-DD): ")
+    user_input = input(
+        "Please enter expected days for extension (integer) or a specific date (YYYY-MM-DD): "
+    )
 
     if str.isdigit(user_input):
         extended_epoch = epoch_handler.extend_epoch(days=int(user_input))
@@ -105,6 +113,7 @@ def main():
 
     if extended_epoch:
         print(f"Extended epoch: {extended_epoch}")
+
 
 if __name__ == "__main__":
     main()
